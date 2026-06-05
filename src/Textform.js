@@ -79,13 +79,27 @@ export default function TextForm(props) {
       >
         <h1>{props.title}</h1>
         <div className="form-group pt-5 text-center">
-          <label for="emailInput fw-3">Email address</label>
-          <textarea
-            className="form-control mx-5"
+          <label htmlFor="emailInput fw-3">Email address</label>
+          {/* <textarea
+            className={`form-control mx-5 text-${props.mode === 'dark' ? 'light' : 'dark'}`}
             value={text}
+            
             onChange={onUpchange}
             style={{ color: textColor, fontWeight: isBold ? "bold" : "normal" }}
-          ></textarea>
+          ></textarea> */}
+
+
+      <textarea
+  className="form-control mx-5"
+  rows="2"
+  value={text}
+  onChange={onUpchange}
+  style={{
+    backgroundColor: bgColor,
+    color: textColor,
+    fontWeight: isBold ? "bold" : "normal",
+  }}
+></textarea>
 
           <button className="btn btn-primary my-3 mx-3" onClick={onUpclick}>
             Upper
@@ -126,13 +140,7 @@ export default function TextForm(props) {
         </div>
       </div>
 
-      {/* {page === "Home" && <div className="container"></div>}
-
-      {page === "About" && (
-        <div className="container mt-5">
-         
-        </div> */}
-      {/* )} */}
+      
     </>
   );
 }

@@ -1,8 +1,10 @@
-import React from "react";
+import React, { useState } from "react";
 
 export default function Navmenu(props) {
 
+
   return (
+   
     <>
       <nav
         className={`navbar navbar-expand-lg navbar-${props.mode} bg-${props.mode}`}
@@ -55,11 +57,12 @@ export default function Navmenu(props) {
             >
 
               <input
-                className="form-check-input"
+                className={`form-check-input `}   
                 type="checkbox"
                 role="switch"
                 id="flexSwitchCheckDefault"
-                onClick={props.toggleMode}
+                onClick={props.togglemode}
+
               />
 
               <label
