@@ -80,14 +80,7 @@ export default function TextForm(props) {
         <h1>{props.title}</h1>
         <div className="form-group pt-5 text-center">
           <label htmlFor="emailInput fw-3">Email address</label>
-          {/* <textarea
-            className={`form-control mx-5 text-${props.mode === 'dark' ? 'light' : 'dark'}`}
-            value={text}
-            
-            onChange={onUpchange}
-            style={{ color: textColor, fontWeight: isBold ? "bold" : "normal" }}
-          ></textarea> */}
-
+          
 
       <textarea
   className="form-control mx-5"

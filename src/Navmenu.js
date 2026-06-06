@@ -1,6 +1,12 @@
-import React, { useState } from "react";
+
 
 export default function Navmenu(props) {
+
+
+  const handleClick = () => {
+  console.log("Switch clicked");
+  props.toggleMode();
+};
 
 
   return (
@@ -56,14 +62,25 @@ export default function Navmenu(props) {
               }`}
             >
 
-              <input
-                className={`form-check-input `}   
+              {/* <input
+                className="form-check-input"  
                 type="checkbox"
                 role="switch"
                 id="flexSwitchCheckDefault"
                 onClick={props.togglemode}
 
-              />
+              /> */}
+
+              <input
+              className="form-check-input"
+              type="checkbox"
+              role="switch"
+              id="flexSwitchCheckDefault"
+              // onClick={props.toggleMode}
+             onChange={handleClick}
+/>
+
+
 
               <label
                 className="form-check-label"

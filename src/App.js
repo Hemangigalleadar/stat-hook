@@ -18,7 +18,7 @@ function App(props) {
   const toggleMode = () => {
     if(mode === 'light'){
       setMode('dark');
-      document.body.style.backgroundColor = '#042743';
+      document.body.style.backgroundColor = "black";
     }
     else{
       setMode('light');
@@ -26,10 +26,25 @@ function App(props) {
     }
   }
 
+
+//   const toggleMode = () => {
+//   console.log("toggleMode called");
+
+//   if (mode === "light") {
+//     setMode("dark");
+//     document.body.style.backgroundColor = "#042743";
+//   } else {
+//     setMode("light");
+//     document.body.style.backgroundColor = "white";
+//   }
+// };
   return (
     <>
     
  <Navmenu title="Navbar" mode={mode} toggleMode={toggleMode}/>
+
+ 
+
 
      <Routes>
    
